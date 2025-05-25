@@ -24,24 +24,24 @@ flowchart LR
 ### With AI Assistant and MCP Server
 
 ```mermaid
-flowchart LR
-  subgraph Frontend_UI
-    A3[AI Assistant Interface]
-    A1[Mobile iOS/Android]
-    A2[Windows Desktop]
-  end
-  A3 --> D[AI Model] 
-  D --> E[MCP Server] 
-  E --> B[Application Server API]
-  B --> C[Database Server]
-  A1 & A2 --> B
-  
+  flowchart LR 
+    subgraph Frontend_UI 
+      A3[AI Assistant Interface] 
+      A1[Mobile iOS/Android] 
+      A2[Windows Desktop] 
+    end 
+    subgraph New_Features[" "] 
+       direction LR 
+          A3 --> D[AI Model] 
+          D --> E[MCP Server] 
+          E --> B[Application Server API] 
+         style New_Features stroke:#28a745,stroke-width:3px 
+    end     
+    B --> C[Database Server] 
+    A1 & A2 --> B  
 ```
 
 
-
-
-B --> C[Database Server]
 
 ## Features
 
