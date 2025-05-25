@@ -34,7 +34,6 @@ flowchart LR
   D --> E[MCP Server] 
   E --> B[Application Server API]
   B --> C[Database Server]
-
   A1 & A2 --> B
   
 ```
