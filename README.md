@@ -9,16 +9,19 @@ With AIMCPSample, an AI assistant interface is added to the frontend. This AI as
 
 ## Architecture Comparison
 
-### Existing System Architecture
+### Traditional System Architecture
 
 ```mermaid
 flowchart LR
   subgraph Frontend_UI
     A1[Mobile iOS/Android]
-    A2[Windows Desktop]
+    A2[Windows Desktop]  
   end
-  A1 & A2 --> B[Application Server API]
+  A1 & A2 --Token--> B[Application Server API]
   B --> C[Database Server]
+
+
+
 ```
  
 ### With AI Assistant and MCP Server
@@ -31,14 +34,14 @@ flowchart LR
       A2[Windows Desktop] 
     end 
     subgraph New_Features[" "]
-      A3 --> D[AI Model] 
+      A3 --Token--> D[AI Model] 
       D --> E[MCP Server]                     
     end     
     style New_Features stroke:#28a745,stroke-width:3px 
     style A3 stroke:#28a745,stroke-width:3px
     E --> B[Application Server API]
     B --> C[Database Server] 
-    A1 & A2 --> B  
+    A1 & A2 --Token--> B  
 ```
 
 
