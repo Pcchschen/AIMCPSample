@@ -35,6 +35,7 @@ flowchart LR
       D --> E[MCP Server]                     
     end     
     style New_Features stroke:#28a745,stroke-width:3px 
+    style A3 stroke:#28a745,stroke-width:3px
     E --> B[Application Server API]
     B --> C[Database Server] 
     A1 & A2 --> B  
