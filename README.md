@@ -31,7 +31,7 @@ flowchart LR
       A2[Windows Desktop] 
     end 
     subgraph New_Features[" "] 
-       direction LR 
+    direction LR 
           A3 --> D[AI Model] 
           D --> E[MCP Server] 
           E --> B[Application Server API]          
