@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMCPSample.Shared", "AIMCP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMCPSample.Web", "AIMCPSample.Web\AIMCPSample.Web.csproj", "{0FF6C21E-1EB3-4F14-9BB3-12E864292260}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIMCPSample.Shared.Tests", "AIMCPSample.Shared.Tests\AIMCPSample.Shared.Tests.csproj", "{47C325B3-6FB9-4C9C-9F57-8AA3A4CA0A5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{0FF6C21E-1EB3-4F14-9BB3-12E864292260}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FF6C21E-1EB3-4F14-9BB3-12E864292260}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FF6C21E-1EB3-4F14-9BB3-12E864292260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C325B3-6FB9-4C9C-9F57-8AA3A4CA0A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C325B3-6FB9-4C9C-9F57-8AA3A4CA0A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C325B3-6FB9-4C9C-9F57-8AA3A4CA0A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C325B3-6FB9-4C9C-9F57-8AA3A4CA0A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,11 +18,13 @@ namespace Nany.Client.Controller
         public override async Task GetAll(APIMSGSend? aPIMSGSend = null)
         {
 
-            var tools = await mcpClient.ListToolsAsync();
-            foreach (var tool in tools)
-            {
-                Console.WriteLine($"{tool.Name} ({tool.Description})");
-            }
+            await Task.CompletedTask;
+
+            //var tools = await mcpClient.ListToolsAsync();
+            //foreach (var tool in tools)
+            //{
+            //    Console.WriteLine($"{tool.Name} ({tool.Description})");
+            //}
 
         }
 
