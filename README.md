@@ -2,6 +2,39 @@
 
 AIMCPSample is a cross-platform example application demonstrating how to use voice input to interact with AI via the MCP tool. The project is built with .NET MAUI Blazor and runs on Android, iOS, and Windows devices.
 
+## Project Purpose
+
+This project aims to modernize the mainstream traditional system architecture, where the frontend UI (mobile: iOS/Android, Windows desktop, etc.) communicates with the application server via APIs, which in turn interacts with the database server.  
+With AIMCPSample, an AI assistant interface is added to the frontend. This AI assistant can automate operations and management of existing IT systems by interacting with an AI model, which then calls an additional MCP server. The MCP server, in turn, communicates with the application server API, enabling intelligent and automated workflows.
+
+## Architecture Comparison
+
+### Traditional System Architecture
+
+```mermaid
+flowchart LR
+  subgraph Frontend_UI
+    A1[Mobile (iOS/Android)]
+    A2[Windows Desktop]
+  end
+  A1 & A2 --> B[Application Server API]
+  B --> C[Database Server]
+```
+ 
+### With AI Assistant and MCP Server
+
+```mermaid
+flowchart LR
+  subgraph Frontend_UI    
+     A3[AI Assistant Interface
+  end
+  A3 --> D[AI Model] D --> E[MCP Server] E --> B[Application Server API]
+  B --> C[Database Server]
+```
+
+
+B --> C[Database Server]
+
 ## Features
 
 - 🎤 **Voice Input**: Use your device's microphone to ask questions by voice.
@@ -44,6 +77,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 
----
-
 > **Note:** This is a sample project for educational and demonstration purposes.
+
