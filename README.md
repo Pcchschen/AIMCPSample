@@ -34,9 +34,9 @@ flowchart LR
        direction LR 
           A3 --> D[AI Model] 
           D --> E[MCP Server] 
-          E --> B[Application Server API] 
-         style New_Features stroke:#28a745,stroke-width:3px 
+          E --> B[Application Server API]          
     end     
+    style New_Features stroke:#28a745,stroke-width:3px 
     B --> C[Database Server] 
     A1 & A2 --> B  
 ```
