@@ -25,12 +25,21 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  subgraph Frontend_UI    
-     A3[AI Assistant Interface]
+  subgraph Frontend_UI
+    A3[AI Assistant Interface]
+    A1[Mobile iOS/Android]
+    A2[Windows Desktop]
   end
-  A3 --> D[AI Model] D --> E[MCP Server] E --> B[Application Server API]
+  A3 --> D[AI Model] 
+  D --> E[MCP Server] 
+  E --> B[Application Server API]
   B --> C[Database Server]
+
+  A1 & A2 --> B
+  
 ```
+
+
 
 
 B --> C[Database Server]
