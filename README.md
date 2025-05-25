@@ -14,7 +14,7 @@ With AIMCPSample, an AI assistant interface is added to the frontend. This AI as
 ```mermaid
 flowchart LR
   subgraph Frontend_UI
-    A1[Mobile (iOS/Android)]
+    A1[Mobile iOS/Android]
     A2[Windows Desktop]
   end
   A1 & A2 --> B[Application Server API]
@@ -26,7 +26,7 @@ flowchart LR
 ```mermaid
 flowchart LR
   subgraph Frontend_UI    
-     A3[AI Assistant Interface
+     A3[AI Assistant Interface]
   end
   A3 --> D[AI Model] D --> E[MCP Server] E --> B[Application Server API]
   B --> C[Database Server]
