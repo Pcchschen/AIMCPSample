@@ -30,13 +30,12 @@ flowchart LR
       A1[Mobile iOS/Android] 
       A2[Windows Desktop] 
     end 
-    subgraph New_Features[" "]
-    direction LR 
+    subgraph New_Features[" "]    
           A3 --> D[AI Model] 
-          D --> E[MCP Server] 
-          E --> B[Application Server API]          
+          D --> E[MCP Server]                     
     end     
     style New_Features stroke:#28a745,stroke-width:3px 
+    E --> B[Application Server API]
     B --> C[Database Server] 
     A1 & A2 --> B  
 ```
