@@ -1,0 +1,62 @@
+﻿@page "/UserLoginAdmin"
+@using Nany.Shared
+@inherits Nany.Client.Controller.CR_UserLoginAll 
+
+<PageTitle>@PageTitle</PageTitle>
+ 
+@{
+    <div class="top-menu">
+        <div style="float: left;">
+            <button class="btn-primary btn-sm" style="display:inline-block;" @onclick="@(() => this.DoPopUpAdd( ))">New</button>
+            <input type="text" style="display:inline-block; width:100px" @bind=@this.SearchKeyWord />
+            <button class="btn-primary btn-sm" style="display:inline-block;" @onclick="@(() => this.DoSearchAndRefresh( ))">Search</button>
+            <button class="btn-primary btn-sm" style="display:inline-block;" @onclick="this.GoHomePage">Home</button>
+        </div>
+    </div>
+
+    <div class="mid-body" style="clear:both;">
+    @if (this.AllObject !=null && this.AllObject.Count>0)
+    {
+       <table class="customer-table">
+           <thead class="thead-light">
+                <tr>
+                    <th style="width:200px">
+                       Login ID
+                    </th>
+                    <th style="width:200px">
+                      User Name
+                    </th>                                        
+                   
+                </tr>
+           </thead>
+           <tbody>
+                @foreach (var obj in this.AllObject)
+                {                     
+                    <tr>                                              
+                        <td class="control-label">                           
+                                <label> @obj.LoginID</label>
+                        </td>                               
+                            <td class="control-label">
+                            <label> @obj.UserDisplayName</label> 
+                        </td>                              
+                    </tr>
+                }
+            </tbody>
+       </table>
+    }
+    </div>
+
+    <div class="bottom-menu">
+        <div style="float: left;">
+            
+        </div>
+    </div>
+
+
+}
+ 
+
+ 
+ 
+
+ 
