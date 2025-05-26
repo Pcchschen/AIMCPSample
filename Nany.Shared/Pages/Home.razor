@@ -1,0 +1,83 @@
+﻿@page "/"
+@using Nany.Shared.Services
+@inject IFormFactor FormFactor
+@inherits Nany.Client.Controller.CR_Home
+
+
+<PageTitle>Deon</PageTitle>
+@* Welcome to your new app running on <em>@factor</em> using <em>@platform</em>. *@
+
+
+@if(this.PageStatus != EN_PageStatus.Inited)
+{
+   
+    <label>Loading...</label>
+}
+else
+{
+
+    if (GlobalClient.CurrentUser != null && !string.IsNullOrEmpty((GlobalClient.CurrentUser?.jwtBearer)))
+    {
+        <label>Welcome to your new app running on<em>@factor</em> using <em>@platform</em>.</label>
+    }
+    else
+    {
+        GlobalClient.CurrentUser = null;
+
+        <div class="container" style="margin-top:50px;margin-bottom:50px">
+          @{        
+                string bgColor = "azure";
+                if (string.IsNullOrEmpty(bgColor))
+                {
+                    bgColor = "azure";
+                }
+
+                if (this.RawObj == null)
+                {
+                    this.RawObj = new Nany.Shared.EntityUserLogin();
+                }
+
+                @if (this.RawObj != null)
+                {
+                    <div class="container mt-5">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card px-5 py-5" id="form1" style="background-color:@bgColor">
+                                    <div class="form-group mb-4" style="background-color:@bgColor">
+                                        <label class="control-label">Login ID:</label>
+                                        <input class="form-control deon-control" type="text" @bind=this.RawObj.LoginID />
+                                    </div>
+                                    <div class="form-group mb-4" style="background-color:@bgColor">
+                                        <label class="control-label"> Password:</label>
+                                        <input class="form-control deon-control" type="password" @bind=this.RawObj.LoginPassword />
+                                    </div>
+
+                                 
+                                    <div class="form-group mb-4">
+                                        <button class="btn btn-primary" @onclick="DoLogin">Login</button>
+                                    </div>
+
+                                    <div class="form-group mb-4">
+                                        <label class="control-label">@AlertMessage</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+
+            }
+        </div>
+    }
+}
+ 
+ 
+@code 
+{
+    private string factor => FormFactor.GetFormFactor();
+    private string platform => FormFactor.GetPlatform();
+}
+ 
+
